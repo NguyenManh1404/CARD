@@ -1,4 +1,4 @@
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -10,28 +10,34 @@
     <title>
     </title>
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="font-awesome.min.css" rel="stylesheet">
     <link href="css/ttt.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
 
-    <div class="page-index">
-    </div>
-    </div>
-    <div class="clearfix">
-    </div>
+
     <div class="container_fullwidth">
         <div class="container shopping-cart">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="title">
-                        Shopping Cart
-                    </h3>
-                    <p>
-                    </p>
-                    <div class="clearfix">
+                <div class="hhhh">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+  <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+</svg>
                     </div>
+                    <h3 class="title">
+                        SHOPPING CARD
+                        
+                    </h3>
+                    
+
+                    <?php 
+                    for($i=0;$i<5;$i++){
+    
+                    ?>
+                    
                     <table class="shop-table">
                         <thead>
                             <tr>
@@ -46,48 +52,16 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <img src="images/products/small/products-06.png" alt="">
+                                    <!-- thay ảnh đồ an vao/ -->
+                                    <img src="images/products/small/products-09.png" alt="" style="width:200px;height:200px;">
                                 </td>
                                 <td>
-                                    <div class="shop-details">
-                                        <div class="productname">
-                                            Lincoln Corner Unit Products
-                                        </div>
-                                        <p>
-                                            <img alt="" src="images/star.png">
-                                            <a class="review_num" href="#">
-                            02 Review(s)
-                          </a>
-                                        </p>
-                                        <div class="color-choser">
-                                            <span class="text">
-                            Product Color : 
-                          </span>
-                                            <ul>
-                                                <li>
-                                                    <a class="black-bg " href="#">
-                                black
-                              </a>
-                                                </li>
-                                                <li>
-                                                    <a class="red-bg" href="#">
-                                light red
-                              </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <p>
-                                            Product Code :
-                                            <strong class="pcode">
-                            Dress 120
-                          </strong>
-                                        </p>
-                                    </div>
+                                  
+                                <?php echo $_SESSION['mang'][$i][0]; ?>
+
                                 </td>
                                 <td>
-                                    <h5>
-                                        $200.00
-                                    </h5>
+                                <?php echo $_SESSION['mang'][$i][1]; ?>
                                 </td>
                                 <td>
                                     <select name="">
@@ -103,11 +77,7 @@
                       </select>
                                 </td>
                                 <td>
-                                    <h5>
-                                        <strong class="red">
-                          $200.00
-                        </strong>
-                                    </h5>
+                                    <?php echo $_SESSION['mang'][$i][1]; ?>
                                 </td>
                                 <td>
                                     <a href="#">
@@ -115,158 +85,12 @@
                                     </a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <img src="images/products/small/products-02.png" alt="">
-                                </td>
-                                <td>
-                                    <div class="shop-details">
-                                        <div class="productname">
-                                            Lincoln Corner Unit Products
-                                        </div>
-                                        <p>
-                                            <img alt="" src="images/star.png">
-                                            <a class="review_num" href="#">
-                            02 Review(s)
-                          </a>
-                                        </p>
-                                        <div class="color-choser">
-                                            <span class="text">
-                            Product Color : 
-                          </span>
-                                            <ul>
-                                                <li>
-                                                    <a class="gray-bg" href="#">
-                                pink
-                              </a>
-                                                </li>
-                                                <li>
-                                                    <a class="black-bg " href="#">
-                                black
-                              </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <p>
-                                            Product Code :
-                                            <strong class="pcode">
-                            Dress 132
-                          </strong>
-                                        </p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>
-                                        $200.00
-                                    </h5>
-                                </td>
-                                <td>
-                                    <select name="">
-                        <option selected value="1">
-                          1
-                        </option>
-                        <option value="2">
-                          2
-                        </option>
-                        <option value="3">
-                          3
-                        </option>
-                      </select>
-                                </td>
-                                <td>
-                                    <h5>
-                                        <strong class="red">
-                          $200.00
-                        </strong>
-                                    </h5>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <img src="images/remove.png" alt="">
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="images/products/small/products-05.png" alt="">
-                                </td>
-                                <td>
-                                    <div class="shop-details">
-                                        <div class="productname">
-                                            Lincoln Corner Unit Products
-                                        </div>
-                                        <p>
-                                            <img alt="" src="images/star.png">
-                                            <a class="review_num" href="#">
-                            02 Review(s)
-                          </a>
-                                        </p>
-                                        <div class="color-choser">
-                                            <span class="text">
-                            Product Color : 
-                          </span>
-                                            <ul>
-                                                <li>
-                                                    <a class="red-bg" href="#">
-                                light red
-                              </a>
-                                                </li>
-                                                <li>
-                                                    <a class=" yellow-bg" href="#">
-                                yellow"
-                              </a>
-                                                </li>
-                                                <li>
-                                                    <a class="black-bg " href="#">
-                                black
-                              </a>
-                                                </li>
-                                                <li>
-                                                    <a class="pink-bg" href="#">
-                                pink
-                              </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <p>
-                                            Product Code :
-                                            <strong class="pcode">
-                            Dress 050
-                          </strong>
-                                        </p>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h5>
-                                        $200.00
-                                    </h5>
-                                </td>
-                                <td>
-                                    <select name="">
-                        <option selected value="1">
-                          1
-                        </option>
-                        <option value="2">
-                          2
-                        </option>
-                        <option value="3">
-                          3
-                        </option>
-                      </select>
-                                </td>
-                                <td>
-                                    <h5>
-                                        <strong class="red">
-                          $200.00
-                        </strong>
-                                    </h5>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <img src="images/remove.png" alt="">
-                                    </a>
-                                </td>
-                            </tr>
+
+<?php
+                    }
+                    ?>
+
+
                         </tbody>
                         <tfoot>
                             <tr>
